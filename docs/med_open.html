@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/openapp2..js" ></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" charset="utf-8" />
+		<title>医联app跳转协议</title>
+		<style>
+			#quanxian /*权限描述文本*/
+			{
+				color: black;
+				background: #C0C0C0;
+			}
+			body
+			{
+				font-family: "微软雅黑";
+			}
+			.del
+			{
+			text-decoration:line-through;
+			color: black;
+			background: red;
+			}
+			.new
+			{
+				background: deepskyblue;
+			}
+			a
+			{
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="new">此色块标记处为新增的协议</p>
+		<p>没有色块标记处为依然有效的协议</p>
+		<p class="del">此色块标记处为已作废的协议</p>
+		<p id="quanxian">此色块标记处为用户权限说明</p>
+<h1>公开群和小组</h1>
+1.
+<a href="javascript: MED.open('/message/group/home?groupId=6448')">公开群主页</a>
+<br />2.
+<a href="javascript: MED.open('/group/home?groupId=1094')">小组主页</a>
+<h1>首页tab</h1>
+<p id="quanxian">1~4 所有用户均能访问<br />
+5 游客跳登录，游客以外角色均能访问</p>
+1.
+<a href="javascript: MED.open('')">空</a>
+<br />2.
+<a href="javascript: MED.open('/')">首页</a>
+<br />3.
+<a href="javascript: MED.open('/search')">搜索页</a>
+<br />4.
+<a href="javascript: MED.open('/search?keyword=口腔')">搜索结果（关键词：口腔）页面</a>
+<br />5.
+<a href="javascript: MED.open('/qrcode/scan')">扫一扫</a>
+
+<h1>视频tab</h1>
+<p id=quanxian>所有用户均能访问</p>
+<a href="javascript: MED.open('/media')">视频tab</a>
+<br />
+<a href="javascript: MED.open('/media/video')">视频主页</a>
+<br />
+<a href="javascript: MED.open('/media/live')">直播主页</a>
+<br />
+<a href="javascript: MED.open('/media/video/category?categoryId=1&categoryName=我是分类名')">视频分类（专家讲座）更多页面</a>
+
+<h1>病例库tab</h1>
+<p id="quanxian">1～4 所有用户均能访问<br />
+5 游客跳登录，游客以外角色均能访问</p>
+1.
+<a href="javascript: MED.open('/disease-lib')">病例库tab</a>
+<br />2.
+<a href="javascript: MED.open('/disease-lib/disease?diseaseId=9459&title=医联测试&tab=0')">病种主页病例tab0</a>
+<br />3.
+<a href="javascript: MED.open('/disease-lib/disease?diseaseId=9459&title=医联测试&tab=1')">病种主页视频tab1</a>
+<br />4.
+<a href="javascript: MED.open('/disease-lib/disease?diseaseId=9459&title=医联测试&tab=2')">病种主页帖子tab2</a>
+<br />5.
+<a href="javascript: MED.open('/disease-lib/disease/contribution-rank?diseaseId=9459')">病例库某个病种的贡献排行榜</a>
+
+<h1>天使圈tab</h1>
+<p id="quanxian">游客跳登录，认证中用户toast，未认证&认证失败用户跳认证，机构用户跳首页，认证医生能访问</p>
+<a class="new" href="javascript: MED.open('/angel/home')">天使圈主页</a>
+<br />
+<a class="new" href="javascript: MED.open('/angel/task')">天使任务页（提升天使分）</a>
+<br />
+<a class="new" href="javascript: MED.open('/angel/rescue?extra=')">治疗患者页面，无extra参数</a>
+<br />
+<a class="new" href="javascript: MED.open('/angel/rescue?extra=医联测试')">治疗患者页面，有extra参数</a>
+<br />
+<a class="new" href="javascript: MED.open('/pk/invite/contact')">pk邀请通讯录页面</a>
+<br />
+
+<h1>社区tab</h1>
+<p id="quanxian">1~5 所有用户均能访问<br />
+6～10 游客跳登录，认证中用户toast，未认证&认证失败用户跳认证，认证用户能访问</p>
+1.
+<a class="del" href="javascript: MED.open('/community')">社区tab</a>//4.2取消了此跳转
+<br />2.
+<a class="del" href="javascript: MED.open('/community/category?categoryId=1&tab=0')">一级社区（内科）最新tab0</a>//4.2取消了一级社区
+<br />3.
+<a class="del" href="javascript: MED.open('/community/category?categoryId=1001&tab=1')">二级社区（消化内科）最热tab1</a>//4.2参数变化
+<br />4.
+<a class="new" href="javascript: MED.open('/community/category?categoryId=1001&tab=0&title=消化内科&intro=')">社区最新，无简介</a>
+<br />5.
+<a class="new" href="javascript: MED.open('/community/category?categoryId=1001&tab=1&title=消化内科&intro=我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本我是一段社区介绍文本')">社区最热，有简介</a>//4.2参数变化：新增必传参数title和非必传参数intro
+<br />6.
+<a href="javascript: MED.open('/casem/add?extra=医联测试')">发布病例，带参数</a>
+<br />7.
+<a href="javascript: MED.open('/casem/add?extra=')">发布病例</a>
+<br />8.
+<a href="javascript: MED.open('/question/add?extra=医联测试')">发布帖子，带参数</a>
+<br />9.
+<a href="javascript: MED.open('/live/create')">发布直播/live/create</a>
+<br />10.
+<a href="javascript: MED.open('/live/add?extra=医联测试')">发布直播/live/add，带参数</a>
+
+<h1>我的tab</h1>
+<p id="quanxian">1~9 游客跳登录，游客以外角色均能访问<br />
+10~13 游客跳登录，认证中用户toast，未认证&认证失败用户跳认证，认证用户能访问<br />
+14 游客跳登录，游客以外角色均能访问<br />
+15～19 游客跳登录，认证中用户toast，未认证&认证失败用户跳认证，机构用户跳首页，认证医生能访问
+</p>
+1.
+<a href="javascript: MED.open('/me')">我的tab</a>
+<br />2.
+<a href="javascript: MED.open('/me/wallet')">我的钱包</a>
+<br />3.
+<a href="javascript: MED.open('/me/ticket')">我的点券</a>
+<br />4.
+<a href="javascript: MED.open('/me/live')">我的直播</a>
+<br />5.
+<a href="javascript: MED.open('/me/video')">我的视频</a>
+<br />6.
+<a href="javascript: MED.open('/me/question')">我的帖子</a>
+<br />7.
+<a href="javascript: MED.open('/me/casem')">我的病例</a>
+<br />8.
+<a href="javascript: MED.open('/me/followed')">我关注的人</a>
+<br />9.
+<a href="javascript: MED.open('/me/fans')">我的粉丝</a>
+<br />10.
+<a href="javascript: MED.open('/me/update')">编辑资料</a>
+<br />11.
+<a href="javascript: MED.open('/me/update/intro')">编辑资料里的个人简介</a>
+<br />12.
+<a href="javascript: MED.open('/me/casem-masterpiece')">病例代表作</a>
+<br />13.
+<a href="javascript: MED.open('/me/update/casem-masterpiece')">病例代表作2</a>
+<br />14.
+<a class="new" href="javascript: MED.open('/me/integral')">我的羽毛</a>
+<br />15.
+<a class="new" href="javascript: MED.open('/me/addmeeting?extra=')">添加会议记录，无extra参数</a>
+<br />16.
+<a class="new" href="javascript: MED.open('/me/addmeeting?extra=医联测试')">添加会议记录，有extra参数</a>
+<br />17.
+<a class="new" href="javascript: MED.open('/me/addpaper?extra=')">添加论文发表页面，无extra参数</a>
+<br />18.
+<a class="new" href="javascript: MED.open('/me/addpaper?extra=医联测试')">添加论文发表页面，有extra参数</a>
+<br />19.
+<a class="new" href="javascript: MED.open('/me/addschool?')">我的学校</a>
+<br />
+
+<h1>登录/注册</h1>
+<p id="quanxian">1 游客跳登录，游客以外角色均跳首页<br />
+2 游客跳登录，QQ/微信注册未认证跳身份认证页面（需要填手机号），手机注册未认证跳身份认证页面（不填手机号），认证中当前页toast提示，认证失败跳身份认证页面（不填手机号），认证用户跳首页<br />
+3 游客跳实名加入页面，QQ/微信注册未认证跳首页，认证中当前页toast提示，认证失败跳首页，认证用户跳首页</p>
+
+1.
+<a href="javascript: MED.open('/user/login')">登录</a>
+<br />2.
+<a href="javascript: MED.open('/user/verify')">认证</a>
+<br />3.
+<a href="javascript: MED.open('/user/verify/have-invite-code')">邀请码认证</a>
+
+<h1>内容</h1>
+<p id="quanxian">1~7 所有用户均能访问<br />
+8~9 游客跳登录，游客以外角色均能访问</p>
+1.
+<a href="javascript: MED.open('/question/item?questionId=30034390')">帖子详情页</a>
+<br />2.
+<a href="javascript: MED.open('/casem/item?casemId=30015321')">病例详情页</a>
+<br />3.
+<a href="javascript: MED.open('/live/detail?liveId=4244')">直播详情页</a>
+<br />4.
+<a href="javascript: MED.open('/live/item?liveId=4244')">直播详情页2</a>
+<br />5.
+<a href="javascript: MED.open('/video/detail?videoId=351&model=0')">视频详情页</a>
+<br />6.
+<a class="del" href="javascript: MED.open('/video/detail?videoId=351&model=1')">视频详情页全屏</a>//已取消的协议20161010
+<br />7.
+<a href="javascript: MED.open('/video/item?videoId=351&model=1')">视频详情页2</a>
+<br />8.
+<a href="javascript: MED.open('/user/home?userId=57016004&type=1')">认证用户主页</a>
+<br />9.
+<a href="javascript: MED.open('/user/home?userId=57008620&type=2')">机构用户主页</a>
+
+<h1>消息</h1>
+<p id="quanxian">游客跳登录，游客以外角色均能访问</p>
+<a href="javascript: MED.open('/message')">消息tab</a>
+<br />
+<a href="javascript: MED.open('/message/address-book')">通讯录</a>
+<br />
+<a href="javascript: MED.open('/message/notice')">通知</a>
+<br />
+<a href="javascript: MED.open('/message/system-message')">系统消息</a>
+<br />
+<a href="javascript: MED.open('/message/wallet')">医联钱包会话</a>
+<br />
+<a href="javascript: MED.open('/message/chat?userId=-66666666&avatar=&name=系统消息&type=1')">系统消息-66666666</a>
+<br />
+<a href="javascript: MED.open('/message/chat?userId=-77777777&avatar=&name=钱包小助手&type=1')">钱包小助手-77777777</a>
+<br />
+<a href="javascript: MED.open('/message/group?groupId=1&avatar=<url>&name=医联测试&membersNum=999999')">群消息聊天详情</a>
+<br />
+<a href="javascript: MED.open('/message/groups')">群聊列表（群通讯录）</a>
+<h1>H5跳转协议不在此页面测试</h1>
+<p id="quanxian">H5跳转协议在Native页面测试</p>
+<a href="javascript: MED.open('/link?url=http%3A%2F%2Fwww.baidu.com&hideHeader=1')">app内部打开url隐藏头部</a>//在闪屏页测试
+<br />
+<a href="javascript: MED.open('/link?url=http%3A%2F%2Fwww.baidu.com')">app内部打开url</a>//在闪屏页测试
+<br />
+
+<a href="javascript: MED.open('/link/external?url=http%3a%2f%2fweb.qa.medlinker.com%2fh5%2fmass%2flaxin.html')">外部浏览器打开url</a>//在闪屏页测试
+<br />
+<a href="javascript: MED.open('/hybridlink?url=http%3A%2F%2Fweb.qa.medlinker.com%2Fh5%2Fapp%2Fpersonalhomepage.html%3Fuserid%3D50700132
+')">跳转到hybrid个人主页</a>//在首页feed测试
+<br />
+<p>
+	更新时间 2017.01.05 by <a href="mailto:lurui@medlinker.com">lurui@medlinker.com</a><br />
+</p>
+<br />
+<a href="hello.html">click</a>
+</body>
+</html>
